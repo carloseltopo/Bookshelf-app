@@ -1,0 +1,274 @@
+*{
+    color: #859698;
+    box-sizing: border-box;
+}
+
+i{
+    width: 12px;
+    height: 12px;
+    color: #e7e5e1;
+    padding-right: 20px;
+}
+body{
+    margin: auto;
+    background-color: #002b36;
+    width: 30%;
+}
+
+.primary{
+    color: #2aa198;
+}
+
+.container .head {
+    padding-left: 50px;
+}
+
+input, button, label {
+    margin: 0 auto;
+    justify-content: center;
+    display: block;
+    width: 50%;
+    cursor:text;
+    box-sizing: border-box;
+}
+
+label{
+    padding-bottom: 10px;
+}
+
+.pindah{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btn:hover{
+    color: #b58900;
+}
+
+.book_shelf {
+    background-color: #839496;
+    width: 75%;
+    margin: 20px auto;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.book_item{
+    padding: 8px 16px 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+    width: 100%;
+}
+
+.book_shelf > .book_list > .book_item {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.book_shelf > h2, h3, p {
+    margin: 8px 0;
+    color: #e7e5e1;
+}
+
+.book_shelf > h2{
+    font-weight: bold;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button{
+    width: 100%;
+}
+
+.shelf-container button{
+    display: inline-block;
+    /* float: right; */
+    width: 45%;
+
+}
+
+.green {
+    background-color: #2AA198;
+    color: #f3f3f3;
+    position:relative;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+}
+
+.green::before {
+    font-family: "Font Awesome 5 Free";
+    top:0;
+    left:-5px;
+    padding-right:10px;
+    content: "\f058";  
+}
+
+.green:active{
+    background-color:#1B7775 ;
+}
+
+.red {
+    background-color: #FDF6E3;
+    color: #000000;
+    position:relative;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    /* float: right; */
+}
+.red::before {
+    font-family: "Font Awesome 5 Free";
+    top:0;
+    left:-5px;
+    padding-right:10px;
+    content: "\f057";  
+}
+
+.red:active{
+    background-color:#A5AFA6 ;
+}
+
+.undo {
+    background-color: #2AA198;
+    color: #f3f3f3;
+    position:relative;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+}
+.undo::before {
+    font-family: "Font Awesome 5 Free";
+    top:0;
+    left:-5px;
+    padding-right:10px;
+    content: "\f02e";   
+}
+
+.undo:active{
+    background-color:#1B7775 ;
+}
+
+.author{
+    color: #ffebb0;
+    font-style: italic;
+}
+
+#tab-content {
+    margin-top:25%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabs{
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+
+.tabs li{
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0px 2px;
+    /* background: #000000; */
+    display: inline-block;
+    /* color: #f3f3f3; */
+    border-radius: 3px 3px 0px 0px;
+    box-shadow: none;
+}
+
+.tab{
+    background: #000000;
+    color: #ffffff;
+}
+
+.active{
+    background: #ffffff;
+    color: #000000;
+}
+
+/* .tabs li:hover{
+    background: #ffffff;
+    animation:.5s;
+    color: #000000;
+} */
+
+/* .tabs li:active{
+    background: #ffffff;
+    color: #000000;
+}
+
+.tabs :nth-child(1){
+    background: #ffffff;
+    color: #000000;
+} */
+
+.panel.active{
+    background: #ffffff;
+    box-shadow: 0 2rem 2rem #000000;
+    min-height: 200px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 3px;
+    display: block;
+    
+}
+
+.innerPanel{
+    animation: fadein .5s;
+}
+
+.panel{
+    display: none;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+.panel p{
+    color: #000000;
+}
+
+.panel-title{
+    margin: 10px 5px;
+    font-size:1.5em;
+    font-weight:bold;
+    margin-bottom: 15px;
+  }
+
+.shelf-container{
+    padding: 20px;
+    margin: 20px 10px;
+    border-left: 0 solid #2aa198;
+    transition: border-left 300ms ease-in-out;
+    border-radius: 0px;
+    animation: fadein .5s;
+}
+
+.shelf-container:hover{
+    /* padding-left: 0.5rem; */
+    border-left: 0.5rem solid #2aa198;
+    border-radius: 0px;
+}

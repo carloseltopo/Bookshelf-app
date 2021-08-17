@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <title>Bookshelf</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+          <i class="fas fa-book-open text primary"></i> <span class="text primary head">Bookshelf</span>Apps</h1>
+
+          <form id="book-form">
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input id="title" type="text" required>
+                </div>
+                <div class="form-group">
+                  <label for="author">Author</label>
+                  <input id="author" type="text" required>
+                </div>
+                <div class="form-group">
+                  <label for="date">Date</label>
+                  <input type="text" id="date" name="date" required>
+                </div>
+                <div class="pindah">
+                  <button id="add" type="submit" class="btn primary" > Add Book</button>
+                </div>
+                <div class="form-group" id="filter">
+                  <label for="search">Search Book</label>
+                  <input type="text" id="search" name="search">
+                </div>
+          </form>
+
+          <div id="tab-content">
+            <ul class="tabs">
+              <li onclick="tabFunctionBookmark()" class="tab active" data-target="#one" >Bookmark</li>
+              <li onclick="tabFunctionComplete()" class="tab " data-target="#two">Completed</li>
+            </ul>
+
+            <div class="panel active one" id="one">
+              <div class="innerPanel">
+                  <div class="panel-title">Bookshelf</div>
+                  <div class="shelf-container">
+                      <h2>Anchor of the wind</h2>
+                      <p>2014</p>
+                      <p class="author">Frans Kafka</p>
+                      <button type="submit" class="green"> Complete</button>
+                      <button type="submit" class="red"> Remove</button>
+                  </div>
+                  <div class="shelf-container">
+                      <h2>Beat me Up</h2>
+                      <p>1992</p>
+                      <p class="author">Franz Babushka </p>
+                      <button type="submit" class="green"> Complete</button>
+                      <button type="submit" class="red"> Remove</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="panel two" id="two">
+              <div class="innerPanel">
+                <div class="panel-title">Bookshelf</div>
+                <div class="shelf-container">
+                    <h2>Anchor of the wind</h2>
+                    <p>2014</p>
+                    <p class="author">Frans Kafka</p>
+                    <button type="submit" class="undo"> Bookmark</button>
+                    <button type="submit" class="red"> Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <section class="book_shelf">
+            <h2>Bookmark</h2>
+            <div id="bookmark" class="container-list">
+              <div id="completeBookshelfList" class="book_list">
+              </div>
+            </div>
+          </section>
+
+          <section class="book_shelf">
+            <h2 >Complete</h2>
+            <div class="list-item" id="completed-todos">
+            </div>
+          </section> -->
+
+      <script src="localstorage.js"></script>
+      <script src="index.js"></script>
+</body>
+</html>
